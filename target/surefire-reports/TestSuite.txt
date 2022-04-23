@@ -1,0 +1,38 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 14.155 s <<< FAILURE! - in TestSuite
+GetAllUsersSchemaTest(users.allUsersTest)  Time elapsed: 0.44 s  <<< FAILURE!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at users.allUsersTest.GetAllUsersSchemaTest(allUsersTest.java:42)
+
+GetFirstUsersCard(users.userCardTest)  Time elapsed: 0.21 s  <<< FAILURE!
+java.lang.AssertionError: 
+2 expectations failed.
+JSON path name doesn't match.
+Expected: is "Валентин Медведев0"
+  Actual: Валентин Медведев
+
+JSON path grade doesn't match.
+Expected: is "Студент потока 0"
+  Actual: Студент
+
+	at users.userCardTest.GetFirstUsersCard(userCardTest.java:51)
+
+GetLastUsersCard(users.userCardTest)  Time elapsed: 0.269 s  <<< FAILURE!
+java.lang.AssertionError: 
+2 expectations failed.
+JSON path name doesn't match.
+Expected: is "Валентин Медведев299"
+  Actual: Валентин Медведев
+
+JSON path grade doesn't match.
+Expected: is "Студент потока 299"
+  Actual: Студент
+
+	at users.userCardTest.GetLastUsersCard(userCardTest.java:60)
+
+JsonSchemaTest(users.userCardTest)  Time elapsed: 0.158 s  <<< FAILURE!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at users.userCardTest.JsonSchemaTest(userCardTest.java:70)
+
