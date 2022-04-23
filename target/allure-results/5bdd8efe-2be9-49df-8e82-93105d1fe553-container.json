@@ -1,1 +1,0 @@
-{"uuid":"5bdd8efe-2be9-49df-8e82-93105d1fe553","name":"projectOtusAPI","start":1650476764963,"stop":1650476771094,"children":["780d3df6-fbb8-48e3-af99-e3b7e9d2eb54"],"befores":[{"name":"connect","status":"passed","stage":"finished","description":"","start":1650476765024,"stop":1650476765245}]}

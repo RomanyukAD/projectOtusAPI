@@ -9,32 +9,14 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+        <maven.compiler.source>14</maven.compiler.source>
+        <maven.compiler.target>14</maven.compiler.target>
+
         <allure.version>1.5.1</allure.version>
         <aspectj.version>1.8.10</aspectj.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>Windows-1251</project.reporting.outputEncoding>
     </properties>
-
-    <repositories>
-        <repository>
-            <id>maven</id>
-            <url>https://repo.maven.apache.org/maven2/</url>
-        </repository>
-        <repository>
-            <id>esphere</id>
-            <url>http://nexus.esphere.local:8081/repository/maven-public/</url>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>maven-public</id>
-            <name>Maven Public</name>
-            <url>http://nexus.esphere.local:8081/repository/maven-public/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
 
     <build>
         <plugins>
@@ -159,11 +141,6 @@
             <groupId>com.ibm.icu</groupId>
             <artifactId>icu4j</artifactId>
             <version>61.1</version>
-        </dependency>
-        <dependency>
-            <groupId>ojdbc</groupId>
-            <artifactId>ojdbc</artifactId>
-            <version>14</version>
         </dependency>
         <dependency>
             <groupId>org.aeonbits.owner</groupId>
