@@ -48,8 +48,7 @@ private BaseApi api;
     public void GetFirstUsersCard() throws FileNotFoundException {
         int userId = idFirstUser;
         Response getFirstUser = api.userAPI().getUserById(userId);
-        getFirstUser.then().statusCode(HttpStatus.SC_OK).body("id",is(idFirstUser), "name", is(nameFirstUser),
-                "grade",is(gradeFirstUser), "school_name",is(notNullValue()), "city",is(notNullValue()));
+        getFirstUser.then().statusCode(HttpStatus.SC_OK).body("id",is(idFirstUser), "name", is(nameFirstUser), "school_name",is(notNullValue()), "city",is(notNullValue()));
     }
 
     @Test(groups = {"api", "positive"})
@@ -57,8 +56,7 @@ private BaseApi api;
     public void GetLastUsersCard() throws FileNotFoundException {
         int userId = idLastUser;
         Response getLastUser = api.userAPI().getUserById(userId);
-        getLastUser.then().statusCode(HttpStatus.SC_OK).body("id",is(idLastUser), "name", is(nameLastUser),
-                "grade",is(gradeLastUser), "school_name",is(notNullValue()), "city",is(notNullValue()));
+        getLastUser.then().statusCode(HttpStatus.SC_OK).body("id",is(idLastUser), "name", is(nameLastUser), "school_name",is(notNullValue()), "city",is(notNullValue()));
     }
 
 
@@ -67,7 +65,7 @@ private BaseApi api;
     public void JsonSchemaTest() throws FileNotFoundException {
         int userId = idFirstUser;
         Response getFirstUser = api.userAPI().getUserById(userId);
-        getFirstUser.then().statusCode(HttpStatus.SC_OK).body(is(matchesJsonSchemaInClasspath(JsonTemplatesConstants.USER_CARD_SCHEMA)));
+        getFirstUser.then().statusCode(HttpStatus.SC_OK).body(matchesJsonSchemaInClasspath("schema/userCardSchema.json"));
     }
 
 

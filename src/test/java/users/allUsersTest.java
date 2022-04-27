@@ -39,7 +39,7 @@ private int idFirstUser;
     @Description("Json schema test")
     public void GetAllUsersSchemaTest() throws FileNotFoundException {
         Response getAllUsers = api.userAPI().getAllUsers();
-        getAllUsers.then().statusCode(HttpStatus.SC_OK).body(is(matchesJsonSchemaInClasspath(JsonTemplatesConstants.USERS_ALL_SCHEMA)));
+        getAllUsers.then().statusCode(HttpStatus.SC_OK).body(matchesJsonSchemaInClasspath("schema/allUsersSchema.json"));
     }
 
 
